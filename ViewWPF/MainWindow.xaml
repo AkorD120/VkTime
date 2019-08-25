@@ -1,0 +1,41 @@
+﻿<Window x:Class="ViewWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ViewWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="228*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="User_Photo" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="160" Margin="10" Grid.Column="0"/>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="125*"/>
+                <ColumnDefinition Width="61*"/>
+                <ColumnDefinition Width="153*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Grid.Column="0" Height="16" Width="Auto"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Surname:" VerticalAlignment="Top" Grid.Column="0" Height="16" Width="Auto"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" Text="City:" VerticalAlignment="Top" RenderTransformOrigin="0.429,2.25" Grid.Column="0" Height="16" Width="Auto"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Country:" VerticalAlignment="Top" RenderTransformOrigin="0.429,2.25" Grid.Column="0" Height="16" Width="Auto"/>
+            <TextBlock Name="User_Name" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="90"/>
+            <TextBlock Name="User_Surname" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="90"/>
+            <TextBlock Name="City" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.429,2.25" Grid.Column="1" Height="16" Width="90"/>
+            <TextBlock Name="User_Country" HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.429,2.25" Grid.Column="1" Height="16" Width="90"/>
+
+
+
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="User ID:" VerticalAlignment="Top" RenderTransformOrigin="0.429,2.25" Grid.Column="2" Height="16" Width="Auto"/>
+            <TextBox Name="User_ID" Grid.Column="3" HorizontalAlignment="Stretch" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button Name="Button_GetInformation" Content="Get information" Grid.Column="3" HorizontalAlignment="Stretch" Margin="10,50,10,0" VerticalAlignment="Top" Height="20"/>
+            <Button Name="Button_GetToken" Grid.Column="0" Content="Get token" HorizontalAlignment="Stretch" Margin="5,112,5,0" VerticalAlignment="Top" Click="Button_GetToken_Click"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
